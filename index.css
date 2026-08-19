@@ -11,7 +11,7 @@
 
 @layer base {
   body {
-    @apply bg-[#050505] text-white antialiased text-[14px];
+    @apply bg-[#050505] text-white antialiased text-[12px];
     font-family: 'Inter', sans-serif;
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
