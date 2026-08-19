@@ -461,7 +461,15 @@ const App: React.FC = () => {
           {isAuthModalOpen && (
             <AuthModal 
               onClose={() => setIsAuthModalOpen(false)} 
-              onAuthSuccess={() => {setIsAuthModalOpen(false); setPage('dashboard');}} 
+              onAuthSuccess={(role) => {
+                setIsAuthModalOpen(false);
+                setCurrentUserRole(role);
+                if (role === 'admin' || role === 'owner') {
+                    setPage('admin');
+                } else {
+                    setPage('dashboard');
+                }
+              }} 
               onOpenLegal={(type) => setLegalDocType(type)}
             />
           )}

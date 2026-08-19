@@ -130,35 +130,35 @@ export const AdminDashboard: React.FC = () => {
                     
                     <div className="overflow-x-auto">
                         <table className="w-full text-left border-collapse">
-                            <thead className="bg-[#111] text-zinc-600 text-[9px] font-black uppercase tracking-[0.2em]">
+                            <thead className="bg-[#151515] text-zinc-400 text-[10px] font-black uppercase tracking-[0.2em] border-b border-white/10">
                                 <tr>
                                     <th className="p-6">Ma'lumot</th>
                                     <th className="p-6">Studio</th>
                                     <th className="p-6 text-right">Amal</th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-white/5">
+                            <tbody className="divide-y divide-white/10">
                                 {pendingUploads.length === 0 ? (
                                     <tr><td colSpan={3} className="p-20 text-center text-zinc-700 font-black uppercase text-xs tracking-widest">Kutilayotgan loyihalar yo'q</td></tr>
                                 ) : pendingUploads.map(up => (
-                                    <tr key={up.id} className="group hover:bg-white/5 transition-all">
+                                    <tr key={up.id} className="group hover:bg-white/[0.03] transition-all">
                                         <td className="p-6 flex items-center gap-5">
                                             <img src={up.poster_url} className="w-12 h-16 rounded-xl object-cover shadow-2xl border border-white/10" alt="" />
                                             <div>
-                                                <p className="text-sm font-black text-white uppercase tracking-tight truncate max-w-[150px]">{up.title}</p>
-                                                <p className="text-[9px] font-bold text-zinc-500 uppercase mt-1">{up.genre.split(',')[0]} • {up.year}</p>
+                                                <p className="text-sm font-bold text-white uppercase tracking-tight truncate max-w-[150px]">{up.title}</p>
+                                                <p className="text-[10px] font-bold text-zinc-500 uppercase mt-1">{up.genre.split(',')[0]} • {up.year}</p>
                                             </div>
                                         </td>
                                         <td className="p-6">
                                             <div className="flex items-center gap-2">
                                                 <span className="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
-                                                <p className="text-xs font-black text-purple-400 uppercase">{(up as any).fandub_channels?.name || 'Ijodkor'}</p>
+                                                <p className="text-xs font-bold text-purple-300 uppercase">{(up as any).fandub_channels?.name || 'Ijodkor'}</p>
                                             </div>
                                         </td>
                                         <td className="p-6 text-right">
                                             <div className="flex justify-end gap-2">
-                                                <button onClick={() => approveFandubUpload(up.id).then(loadData)} className="p-3 bg-green-600/10 hover:bg-green-600 text-green-500 hover:text-white rounded-2xl transition-all shadow-xl"><Check size={18}/></button>
-                                                <button onClick={() => toggleBlockFandub(up.id, true).then(loadData)} className="p-3 bg-red-600/10 hover:bg-red-600 text-red-500 hover:text-white rounded-2xl transition-all shadow-xl"><XIcon size={18}/></button>
+                                                <button onClick={() => approveFandubUpload(up.id).then(loadData)} className="p-3 bg-green-900/20 hover:bg-green-600 text-green-500 hover:text-white rounded-2xl transition-all shadow-xl border border-green-500/20"><Check size={18}/></button>
+                                                <button onClick={() => toggleBlockFandub(up.id, true).then(loadData)} className="p-3 bg-red-900/20 hover:bg-red-600 text-red-500 hover:text-white rounded-2xl transition-all shadow-xl border border-red-500/20"><XIcon size={18}/></button>
                                             </div>
                                         </td>
                                     </tr>
