@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Anilo.uz | Professional Anime Olami</title>
+    <meta name="title" content="Anilo.uz | Professional Anime Portali" />
+    <meta name="description" content="Anilo.uz - O'zbekistondagi eng yirik professional anime portali. Sevimli animelaringizni yuqori sifatda (HD, 4K) va professional dublyajda tomosha qiling." />
+    <meta name="keywords" content="anime, o'zbek tilida, dublyaj, anilo, uzumaki, naruto, onepiece, ko'rish, skachat, PWA" />
+    
+    <!-- Open Graph / Facebook / Telegram -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://anilo.uz/" />
+    <meta property="og:title" content="Anilo.uz | Anime Portali" />
+    <meta property="og:description" content="Professional dublyaj va yuqori sifatli animelar o'zbek tilida faqat bizda." />
+    <meta property="og:image" content="https://i.ibb.co/d0sbbjj2/1772622833464-mxcxtqxe8.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://anilo.uz/" />
+    <meta property="twitter:title" content="Anilo.uz | Anime Olami" />
+    <meta property="twitter:description" content="Eng sara animelar o'zbek tilida." />
+    <meta property="twitter:image" content="https://i.ibb.co/d0sbbjj2/1772622833464-mxcxtqxe8.jpg" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/d0sbbjj2/1772622833464-mxcxtqxe8.jpg" />
+    <link rel="apple-touch-icon" href="https://i.ibb.co/d0sbbjj2/1772622833464-mxcxtqxe8.jpg" />
+    <link rel="shortcut icon" href="https://i.ibb.co/d0sbbjj2/1772622833464-mxcxtqxe8.jpg" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    
+    <!-- PWA Optimized Meta -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#f97316" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Anilo">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Anilo">
+    <meta name="msapplication-TileColor" content="#050505">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js', { scope: '/' })
+            .then(function(reg) {
+              console.log('PWA: Ready', reg.scope);
+            })
+            .catch(function(err) {
+              console.warn('PWA: Error', err);
+            });
+        });
+      }
+    </script>
+
+    <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.93.1",
+    "tailwindcss": "https://esm.sh/tailwindcss@^4.1.18",
+    "pdf-lib": "https://esm.sh/pdf-lib@^1.17.1",
+    "autoprefixer": "https://esm.sh/autoprefixer@^10.4.23",
+    "process": "https://esm.sh/process@^0.11.10"
+  }
+}
+</script>
+  </head>
+  <body class="bg-[#050505] text-gray-200">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

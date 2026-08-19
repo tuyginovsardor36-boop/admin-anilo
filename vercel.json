@@ -1,0 +1,54 @@
+
+{
+  "rewrites": [
+    {
+      "source": "/api-tspay/(.*)",
+      "destination": "https://tspay.uz/api/v1/$1"
+    },
+    {
+      "source": "/logotip.png",
+      "destination": "/logotip.png"
+    },
+    {
+      "source": "/((?!assets/|logotip\\.png|manifest\\.json|sw\\.js|sitemap\\.xml|robots\\.txt|.*\\.(?:png|svg|ico|jpg|jpeg|json|xml|js|css)$).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/sw.js",
+      "headers": [
+        {
+          "key": "Service-Worker-Allowed",
+          "value": "/"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        }
+      ]
+    },
+    {
+      "source": "/logotip.png",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "image/png"
+        }
+      ]
+    },
+    {
+      "source": "/manifest.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/manifest+json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "uz.anilo.mobile",
+    "sha256_cert_fingerprints": ["C3:CF:98:62:ED:83:25:7E:98:B2:15:DF:22:5A:81:93:0D:54:99:A6:0E:86:E5:12:45:6B:D3:2D:37:63:80:29"]
+  }
+}]
